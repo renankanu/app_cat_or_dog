@@ -1,4 +1,5 @@
 import 'package:appcatordog/app/screen/home/home_screen.dart';
+import 'package:appcatordog/app/utils/images.dart';
 import 'package:appcatordog/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -26,7 +27,7 @@ class MySplashScreen extends StatelessWidget {
                   fontSize: 24,
                 ),
               ),
-              Lottie.asset('assets/lotties/paws.json', onLoaded: (composition) {
+              Lottie.asset(Images.paws, onLoaded: (composition) {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(

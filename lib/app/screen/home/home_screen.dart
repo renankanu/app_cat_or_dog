@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:appcatordog/app/utils/images.dart';
 import 'package:appcatordog/app/widgets/base_button.dart';
 import 'package:appcatordog/constants.dart';
 import 'package:flutter/material.dart';
@@ -99,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Column(
                           children: [
                             Image.asset(
-                              'assets/cat.png',
+                              Images.logo,
                             ),
                             SizedBox(
                               height: 50,
