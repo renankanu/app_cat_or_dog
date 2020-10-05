@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.red,
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          backgroundColor: kCowboy),
+          backgroundColor: kCowboy,
+          fontFamily: 'JosefinSans'),
       home: MySplashScreen(),
     );
   }
