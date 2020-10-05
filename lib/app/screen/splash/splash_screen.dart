@@ -1,3 +1,4 @@
+import 'package:appcatordog/app/screen/home/home_screen.dart';
 import 'package:appcatordog/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -21,9 +22,19 @@ class MySplashScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Cat & Dog Finder"),
+              Text(
+                "Cat & Dog Finder",
+                style: TextStyle(
+                  fontSize: 24,
+                ),
+              ),
               Lottie.asset('assets/lotties/paws.json', onLoaded: (composition) {
-                print("Finish");
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeScreen(),
+                  ),
+                );
               }),
             ],
           ),
