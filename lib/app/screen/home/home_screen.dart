@@ -44,7 +44,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   pickImage() async {
     var image = await picker.getImage(source: ImageSource.camera);
-    if (image = null) return null;
+    if (image == null) {
+      return null;
+    }
     setState(() {
       _image = File(image.path);
     });
