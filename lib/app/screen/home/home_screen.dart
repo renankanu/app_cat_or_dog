@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:appcatordog/app/widgets/base_button.dart';
 import 'package:appcatordog/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -80,11 +81,11 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
                 'TeachableMachine.com CNN',
-                style: TextStyle(color: Color(0xFFEEDA28), fontSize: 18),
+                style: TextStyle(color: kNeptune, fontSize: 18),
               ),
               SizedBox(
                 height: 6,
@@ -92,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Text(
                 'Detect Cats and Dogs',
                 style: TextStyle(
-                  color: Color(0xFFE99600),
+                  color: kNeptune,
                   fontWeight: FontWeight.w500,
                   fontSize: 23,
                 ),
@@ -130,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   )
                                 : Container(),
                             SizedBox(
-                              height: 20,
+                              height: 40,
                             )
                           ],
                         ),
@@ -140,42 +141,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   children: [
-                    GestureDetector(
-                      onTap: pickImage,
-                      child: Container(
-                        width: MediaQuery.of(context).size.width - 150,
-                        alignment: Alignment.center,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 24, vertical: 17),
-                        decoration: BoxDecoration(
-                          color: Colors.deepOrange,
-                          borderRadius: BorderRadius.circular(6),
-                        ),
-                        child: Text(
-                          'Take a photo',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
+                    BaseButton(
+                      text: 'Take a photo',
+                      textColor: Colors.white,
+                      color: kMandy,
+                      press: pickImage,
                     ),
                     SizedBox(
                       height: 10,
                     ),
-                    GestureDetector(
-                      onTap: pickGalleryImage,
-                      child: Container(
-                        width: MediaQuery.of(context).size.width - 150,
-                        alignment: Alignment.center,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 24, vertical: 17),
-                        decoration: BoxDecoration(
-                          color: Colors.deepOrange,
-                          borderRadius: BorderRadius.circular(6),
-                        ),
-                        child: Text(
-                          'Import from Gallery',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
+                    BaseButton(
+                      text: 'Import from Gallery',
+                      textColor: Colors.white,
+                      color: kMandy,
+                      press: pickGalleryImage,
                     ),
                     SizedBox(
                       height: 10,
