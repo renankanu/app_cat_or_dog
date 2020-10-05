@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:appcatordog/app/screen/home/home_screen.dart';
 import 'package:appcatordog/app/utils/images.dart';
 import 'package:appcatordog/constants.dart';
@@ -5,7 +7,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
 
-class MySplashScreen extends StatelessWidget {
+class MySplashScreen extends StatefulWidget {
+  @override
+  _MySplashScreenState createState() => _MySplashScreenState();
+}
+
+class _MySplashScreenState extends State<MySplashScreen> {
+  final splashDelay = 5;
+  @override
+  void initState() {
+    super.initState();
+
+    _loadWidget();
+  }
+
+  _loadWidget() async {
+    var _duration = Duration(seconds: splashDelay);
+    return Timer(_duration, navigationPage);
+  }
+
+  void navigationPage() {
+    Navigator.pushReplacement(context,
+        MaterialPageRoute(builder: (BuildContext context) => HomeScreen()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,14 +52,7 @@ class MySplashScreen extends StatelessWidget {
                   fontSize: 24,
                 ),
               ),
-              Lottie.asset(Images.paws, onLoaded: (composition) {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => HomeScreen(),
-                  ),
-                );
-              }),
+              Lottie.asset(Images.paws),
             ],
           ),
         ),
