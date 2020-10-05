@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:appcatordog/app/widgets/base_button.dart';
 import 'package:appcatordog/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:tflite/tflite.dart';
 
@@ -75,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: new AppBar(
         elevation: 0,
         backgroundColor: kCowboy,
-        brightness: Brightness.dark, // or use Brightness.dark
+        brightness: Brightness.dark,
       ),
       body: SafeArea(
         child: Container(
