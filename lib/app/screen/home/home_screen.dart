@@ -84,14 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'TeachableMachine.com CNN',
-                style: TextStyle(color: kNeptune, fontSize: 18),
-              ),
-              SizedBox(
-                height: 6,
-              ),
-              Text(
-                'Detect Cats and Dogs',
+                'Cats and Dogs ?',
                 style: TextStyle(
                   color: kNeptune,
                   fontWeight: FontWeight.w500,
@@ -116,6 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     : Container(
                         child: Column(
                           children: [
+                            SizedBox(height: 50),
                             Container(
                               height: 250,
                               child: Image.file(_image),
