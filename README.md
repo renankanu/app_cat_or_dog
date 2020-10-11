@@ -1,16 +1,23 @@
-# appcatordog
+# Cat or Dog
 
-flutter app using tflite, to know if it's a cat or dog in the image
+I am studying Flutter and I created this application for learning. There is still room for improvement, so I am open to any feedback. Sharing with each other helps us grow and learn. ✌️
 
-## Getting Started
+## about project
+<p align="center">
+  <img src="./prints/app.gif" width="150" title="print one">
+</p>
+<p>
+<img src="./prints/printOne.png" width="150" title="print one">
+  <img src="./prints/printTwo.png" width="150" alt="print two">
+  <img src="./prints/printThree.png" width="150" alt="print three">
+  <img src="./prints/printFour.png" width="150" alt="print four">
+</p>
 
-This project is a starting point for a Flutter application.
+Project used for studies, it used tflite to recognize images, cat or dog
 
-A few resources to get you started if this is your first Flutter project:
+## Plugins used
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [tflite](https://pub.dev/packages/tflite):
+- [image_picker](https://pub.dev/packages/image_picker): ^0.6.7+11
+- [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons): ^0.8.1
+- [lottie](https://pub.dev/packages/lottie): ^0.6.0
